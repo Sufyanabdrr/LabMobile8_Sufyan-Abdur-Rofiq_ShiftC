@@ -34,6 +34,8 @@ Data mahasiswa yang sudah diedit :
 
 ![image](https://github.com/user-attachments/assets/ebeaba82-cd8b-4d39-8d87-8753d6c6691d)
 
+Tampilan Data Mahasiswa setelah data mahasiswa Prasetyo Angga berhasil diedit :
+
 ![image](https://github.com/user-attachments/assets/82169c70-8598-4c97-99d8-01d91f2ed5b4)
 
 4. Tampilan Hapus Mahasiswa :
