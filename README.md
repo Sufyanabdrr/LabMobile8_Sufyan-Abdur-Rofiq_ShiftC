@@ -108,6 +108,60 @@ File edit.php digunakan untuk mengubah data mahasiswa yang sebelumnya sudah dita
 
 7. Selanjutnya, kita mengedit file api.service.ts pada folder service/api yang telah dibuat sebelumnya. Di sini, kita mengubah apiURL menjadi 'http://localhost/mahasiswa'.
 
+![image](https://github.com/user-attachments/assets/6ca1764f-6bdc-4477-902d-32f70f7498b6)
+
+8. Selanjutnya, kita melakukan pengeditan pada halaman mahasiswa, yaitu di file mahasiswa.page.html dan mahasiswa.page.ts.
+
+a). File mahasiswa.page.html :
+
+Kode di bawah ini menampilkan header dengan tulisan "Data Mahasiswa" yang memiliki efek transparan, serta tombol "Tambah Mahasiswa" yang akan memanggil fungsi openModalTambah() ketika diklik untuk menambahkan data mahasiswa.
+
+![image](https://github.com/user-attachments/assets/7152234c-ce44-41ed-a92d-e2667ebacc3b)
+
+Kode di bawah ini mendefinisikan modal "Tambah Mahasiswa" yang muncul ketika modalTambah diaktifkan. Modal ini memiliki tombol "Batal" untuk menutup modal dan form input untuk mengisi nama serta jurusan mahasiswa, yang terhubung dengan variabel nama dan jurusan. Setelah data diisi, tombol "Tambah Mahasiswa" akan memanggil fungsi tambahMahasiswa() untuk menambahkan data mahasiswa.
+
+![image](https://github.com/user-attachments/assets/09c72dd3-aaef-4b76-8dd1-ef1fcb805fe1)
+
+Kode di bawah ini membuat modal "Edit Mahasiswa" yang muncul ketika modalEdit diaktifkan. Modal ini memiliki tombol "Batal" untuk menutup modal dan dua input untuk mengubah nama serta jurusan mahasiswa, yang terhubung dengan variabel nama dan jurusan. Tombol "Simpan Perubahan" akan memanggil fungsi editMahasiswa() untuk menyimpan perubahan data mahasiswa.
+
+![image](https://github.com/user-attachments/assets/67a65f78-1eb4-426d-9f4e-d868b203d5f1)
+
+Kode di bawah ini menampilkan daftar mahasiswa menggunakan <ion-card> yang diulang untuk setiap item dalam dataMahasiswa. Setiap kartu menampilkan nama dan jurusan mahasiswa, serta dua tombol: "Edit" untuk membuka modal edit dengan openModalEdit() dan "Hapus" untuk menghapus data mahasiswa melalui fungsi hapusMahasiswa().
+
+![image](https://github.com/user-attachments/assets/0f48c232-9158-4a74-a203-cf0ccb54ac54)
+
+b). File mahasiswa.page.ts :
+
+![image](https://github.com/user-attachments/assets/9214e1d7-fe3f-48a4-a552-0e577aaba4a4)
+
+![image](https://github.com/user-attachments/assets/dd8081d3-1a18-46a7-b820-f6adb6443ccb)
+
+![image](https://github.com/user-attachments/assets/7c67f594-6ce4-40d8-bc64-b028a4d4880e)
+
+![image](https://github.com/user-attachments/assets/843fb33d-989c-4011-9345-003c707805b5)
+
+Kode di atas adalah komponen Angular untuk halaman "Mahasiswa" dalam aplikasi Ionic yang digunakan untuk mengelola data mahasiswa melalui berbagai interaksi. Komponen ini memanfaatkan ModalController dan AlertController dari Ionic untuk menampilkan modal (popup) dan konfirmasi alert. Data mahasiswa disimpan dalam array dataMahasiswa, dan komponen ini menyediakan fitur untuk menambah, mengedit, dan menghapus data mahasiswa dengan berinteraksi dengan API melalui ApiService. Variabel seperti id, nama, dan jurusan digunakan untuk menyimpan data mahasiswa yang sedang dipilih atau diedit.
+
+Saat halaman dimuat, fungsi ngOnInit() akan memanggil metode getMahasiswa() untuk mengambil data mahasiswa dari server dan menampilkannya di halaman. Fungsi tambahMahasiswa() digunakan untuk menambahkan mahasiswa baru ke daftar jika input nama dan jurusan sudah diisi, sedangkan editMahasiswa() digunakan untuk mengubah data mahasiswa yang sudah ada. Kedua proses ini berkomunikasi dengan API untuk menyimpan perubahan, dan halaman akan diperbarui secara otomatis setelah berhasil.
+
+Fungsi lainnya, seperti hapusMahasiswa(), akan menampilkan konfirmasi melalui alert sebelum menghapus data mahasiswa dari server. Modal untuk menambah atau mengedit data mahasiswa dibuka dengan memanggil fungsi openModalTambah() atau openModalEdit(), yang memungkinkan pengguna untuk melakukan perubahan. Setelah modal ditutup, input form akan direset menggunakan fungsi resetModal(), memastikan tidak ada data lama yang tertinggal di form.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
